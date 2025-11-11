@@ -42,7 +42,6 @@ Route=/connetions => Connections
 Router=/profile => Profile
 
     # Deployment
-
     - Signup on AWS
     - Launch instance
     - chmod 400 <secret>.pem

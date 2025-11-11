@@ -72,19 +72,19 @@ Router=/profile => Profile
 # Ngxinx config:
 
         Frontend = http://43.204.96.49/
-        Backend = http://43.204.96.49:7777/
+        Backend = http://43.204.96.49:8888/
 
         Domain name = techbond.com => 43.204.96.49
 
         Frontend = techbond.com
-        Backend = techbond.com:7777 => techbond.com/api
+        Backend = techbond.com:8888 => techbond.com/api
 
         nginx config :
 
         server_name 43.204.96.49;
 
         location /api/ {
-            proxy_pass http://localhost:7777/;  # Pass the request to the Node.js app
+            proxy_pass http://localhost:8888/;  # Pass the request to the Node.js app
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection 'upgrade';
